@@ -5,7 +5,7 @@
 
   import video from './video.mp4' // (Write your video path)
   
-  import VideoPlayer from './videoPlayer'
+  import VideoPlayer from './source/videoPlayer'
 
 
 -> You can use player with < VideoPlayer source={video} /> tag
