@@ -1,5 +1,5 @@
 # Video-Player
--> Upload "source" folder to your project.
+-> Upload "source" folder to src in your project.
 
 -> Add the following lines to App.js.
 
@@ -8,6 +8,4 @@
   import VideoPlayer from './source/videoPlayer'
 
 
--> You can use player with < VideoPlayer source={video} /> tag
-
-// You can use "width" and "aspectRatio" attributes.
+-> You can use player with < VideoPlayer width="800px" aspectRatio="16/9" source={video} /> tag
