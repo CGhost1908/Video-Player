@@ -5,7 +5,7 @@
 
   import video from './video.mp4' // (Write your video path)
   
-  import VideoPlayer from './source/videoPlayer'
+  import VideoPlayer from './videoPlayer'
 
 
 -> You can use player with < VideoPlayer width="800px" aspectRatio="16/9" source={video} /> tag
