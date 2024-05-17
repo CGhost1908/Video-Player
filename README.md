@@ -1,4 +1,4 @@
-# Video-Player
+# Video-Player-React
 -> Upload files from "player" to "src" and "public".
 
 -> Add the following lines to parent js.
