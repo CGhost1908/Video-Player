@@ -8,4 +8,4 @@
   import VideoPlayer from './videoPlayer'
 
 
--> You can use player with < VideoPlayer width="800px" aspectRatio="16/9" source={video} /> tag
+-> You can use player with < VideoPlayer width="800px" aspectRatio="16/9" src={video} /> tag
