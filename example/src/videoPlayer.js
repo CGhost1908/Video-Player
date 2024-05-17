@@ -67,10 +67,10 @@ function VideoPlayer(props) {
     };
 
     const handleRangeChange = (e) => {
-        const newTime = e.target.value * duration / 100;
+        const newTime = e.target.value;
         videoRef.current.currentTime = newTime;
         setCurrentTime(newTime);
-        setProgressWidth((newTime / duration) * 100);
+        setProgressWidth((newTime / duration) * duration);
     };
 
     const toggleVideo = () => {
@@ -180,6 +180,7 @@ function VideoPlayer(props) {
         ref={videoRef}
         onClick={toggleVideo}
         onEnded={handleVideoEnded}
+        poster={props.thumbnail}
         style={{ width: props.width, height: props.height, aspectRatio: props.aspectRatio, minWidth: '400px'}}
         src={props.src} 
         >{videoRef.current && !videoRef.current.paused ? 'Pause' : 'Play'}
@@ -209,7 +210,7 @@ function VideoPlayer(props) {
             <img className='skip-button' id="backward" src='backward.png' onClick={skipBackward}/>
             <h1 id='time' className='time'>{formatTime(currentTime)} / {formatTime(duration)}</h1>
             <img className='skip-button' id="forward" src='forward.png' onClick={skipForward}/>
-            <input id='timing-range' type="range" min="0" max="100" value={(currentTime / duration) * 100} onChange={handleRangeChange} className='timing-range' />
+            <input id='timing-range' type="range" min="0" max={duration} value={(currentTime / duration) * duration} onChange={handleRangeChange} className='timing-range' />
             <img src='fullscreen.png' onClick={handleFullScreen} className="fullscreen-button"/>
         </div>
     </div>

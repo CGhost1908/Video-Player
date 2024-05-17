@@ -1,10 +1,10 @@
 import './App.css';
-import video from './Comp1.mp4';
 import VideoPlayer from './videoPlayer'
+import videoSource from './videoSource'
 
 function App() {
   return (
-    <VideoPlayer width="800px" aspectRatio="16/9" src={video}/>
+    <VideoPlayer thumbnail="./thumbnail.jpg" width="800px" aspectRatio="16/9" src={videoSource()}/>
   );
 }
 
