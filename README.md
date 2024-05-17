@@ -1,11 +1,14 @@
 # Video-Player
--> Upload "source" folder to src in your project.
+-> Upload files from "player" to "src" and "public".
 
--> Add the following lines to App.js.
+-> Add the following lines to parent js.
 
-  import video from './video.mp4' // (Write your video path)
-  
   import VideoPlayer from './videoPlayer'
+  
+  import videoSource from './videoSource'
 
+-> You can use player with below tag
 
--> You can use player with < VideoPlayer width="800px" aspectRatio="16/9" src={video} /> tag
+  <VideoPlayer thumbnail="./thumbnail.jpg" width="800px" aspectRatio="16/9" src={videoSource()}/>
+
+-> You can change video source from videoSource.js Line1. (Video must be in public folder.)
